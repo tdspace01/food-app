@@ -3,6 +3,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 
 class KotlinLibraryConventionPlugin : Plugin<Project> {
@@ -22,6 +23,10 @@ class KotlinLibraryConventionPlugin : Plugin<Project> {
                 compilerOptions {
                     jvmTarget.set(ConventionConstants.JVM_TARGET)
                 }
+            }
+
+            dependencies {
+                implementation(libs, ConventionConstants.Libraries.KOTLINX_COROUTINES_CORE)
             }
         }
     }

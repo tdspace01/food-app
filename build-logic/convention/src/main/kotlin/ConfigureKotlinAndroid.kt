@@ -71,6 +71,7 @@ private fun Project.configureSharedKotlinAndDependencies() {
         implementation(libs, Libraries.ANDROIDX_LIFECYCLE_RUNTIME)
         implementation(libs, Libraries.KOIN_ANDROID)
         implementation(libs, Libraries.KOIN_CORE_VIEWMODEL)
+        implementation(libs, Libraries.KOTLINX_COROUTINES_CORE)
         implementationBundle(libs, ConventionConstants.Bundles.NAVIGATION)
         testImplementationBundle(libs, ConventionConstants.Bundles.TESTING)
     }
