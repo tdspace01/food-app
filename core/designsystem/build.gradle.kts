@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.example.designsystem"
 }
+
+dependencies{
+    implementation(projects.core.domain)
+}
