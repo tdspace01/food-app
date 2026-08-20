@@ -17,13 +17,9 @@ object Dimensions {
     val dimension22 = 22.dp
     val dimension26 = 26.dp
     val dimension28 = 28.dp
-    val dimension32 = 32.dp
     val dimension36 = 36.dp
     val dimension38 = 38.dp
-    val dimension40 = 40.dp
     val dimension42 = 42.dp
     val dimension44 = 44.dp
-    val dimension48 = 48.dp
     val dimension50 = 50.dp
-    val dimension56 = 56.dp
 }
