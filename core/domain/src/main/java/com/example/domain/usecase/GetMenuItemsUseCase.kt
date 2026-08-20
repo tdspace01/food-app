@@ -7,32 +7,39 @@ class GetMenuItemsUseCase {
     private val mockMenuList = listOf(
         CartItem(
             id = 1,
-            name = "Cheeseburger",
-            description = "Juicy beef patty with cheddar cheese and fresh lettuce",
-            price = 12.50,
+            name = "Margherita Pizza",
+            description = "Classic tomato sauce, fresh mozzarella, and basil",
+            price = 16.00,
             imageResId = 101
         ),
         CartItem(
             id = 2,
-            name = "Margherita Pizza",
-            description = "Classic tomato sauce, fresh mozzarella, and basil",
-            price = 16.00,
-            imageResId = 102
-        ),
-        CartItem(
-            id = 3,
             name = "Caesar Salad",
             description = "Crispy romaine lettuce, croutons, and Parmesan cheese",
             price = 9.50,
             imageResId = 103
         ),
         CartItem(
-            id = 4,
+            id = 3,
             name = "Iced Cola",
             description = "Refreshing chilled beverage 330ml",
             price = 3.00,
-            imageResId = 104
-        )
+            imageResId = 102
+        ),
+        CartItem(
+            id = 4,
+            name = "Iced Cola 2",
+            description = "Refreshing chilled beverage 330ml",
+            price = 3.00,
+            imageResId = 102
+        ),
+        CartItem(
+            id = 5,
+            name = "Caesar Salad 2",
+            description = "Crispy romaine lettuce, croutons, and Parmesan cheese",
+            price = 9.50,
+            imageResId = 103
+        ),
     )
 
     operator fun invoke(filter: FoodFilter = FoodFilter.ALL): List<CartItem> {
