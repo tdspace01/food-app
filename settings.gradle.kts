@@ -26,3 +26,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "foodApp"
 include(":app")
+include(":core:data")
+include(":core:designsystem")
+include(":core:domain")
+include(":core:navigation")
+include(":core:ui")
+include(":feature:cart")
+include(":feature:menu")

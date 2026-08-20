@@ -6,4 +6,6 @@ android {
     namespace = "com.example.foodapp"
 }
 
-dependencies{}
+dependencies{
+    implementation(projects.core.navigation)
+}
