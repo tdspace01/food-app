@@ -7,8 +7,8 @@ android {
 }
 
 dependencies{
-    implementation(project(":core:ui"))
-    implementation(project(":core:domain"))
-    implementation(project(":core:navigation"))
-    implementation(project(":core:designsystem"))
+    implementation(projects.core.domain)
+    implementation(projects.core.navigation)
+    implementation(projects.core.designsystem)
+    implementation(projects.core.ui)
 }
