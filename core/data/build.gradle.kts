@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.example.data"
 }
+
+dependencies{
+    implementation(projects.core.domain)
+}

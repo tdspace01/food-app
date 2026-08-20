@@ -39,6 +39,7 @@ object ConventionConstants {
         const val ANDROIDX_CORE_KTX = "androidx-core-ktx"
         const val ANDROIDX_LIFECYCLE_RUNTIME = "androidx-lifecycle-runtime-ktx"
         const val ANDROIDX_ACTIVITY_COMPOSE = "androidx-activity-compose"
+        const val KOTLINX_COROUTINES_CORE = "kotlinx-coroutines-core"
     }
 
     object Bundles {

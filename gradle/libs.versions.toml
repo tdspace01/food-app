@@ -17,6 +17,7 @@ lifecycleViewmodelNavigation3 = "2.11.0"
 appcompat = "1.6.1"
 material = "1.10.0"
 jetbrainsKotlinJvm = "2.4.10"
+coroutines = "1.10.1"
 
 [libraries]
 androidx-lifecycle-viewmodel-navigation3 = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodelNavigation3" }
@@ -49,6 +50,7 @@ androidx-compose-foundation = { group = "androidx.compose.foundation", name = "f
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 koin-core-viewmodel = { group = "io.insert-koin", name = "koin-core-viewmodel", version.ref = "koin" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
