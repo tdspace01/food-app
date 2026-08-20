@@ -31,6 +31,7 @@ object ConventionConstants {
     object Libraries {
         const val KOIN_ANDROID = "koin-android"
         const val KOIN_COMPOSE = "koin-androidx-compose"
+        const val KOIN_CORE_VIEWMODEL = "koin-core-viewmodel"
         const val COMPOSE_BOM = "androidx-compose-bom"
         const val ROOM_RUNTIME = "androidx-room-runtime"
         const val ROOM_KTX = "androidx-room-ktx"
