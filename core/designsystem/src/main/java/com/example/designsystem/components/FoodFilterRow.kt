@@ -22,29 +22,26 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.designsystem.theme.FoodGoTheme
 
-enum class FoodFilter(val label: String) {
-    ALL("All"),
-    PIZZA("Pizza"),
-    SALADS("Salads"),
-    DRINKS("Drinks")
-}
-
 @Composable
-fun FoodFilterRow(
-    selected: FoodFilter,
-    modifier: Modifier = Modifier,
-    onFilterSelected: (FoodFilter) -> Unit
+fun <T> FoodFilterRow(
+    items: List<T>,
+    selectedItem: T,
+    itemLabel: (T) -> String,
+    onItemSelected: (T) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     LazyRow(
         modifier = modifier,
         contentPadding = PaddingValues(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        items(FoodFilter.entries) { filter ->
+        items(items) { item ->
+            val isSelected = item == selectedItem
+
             FilterChipItem(
-                label = filter.label,
-                isSelected = filter == selected,
-                onClick = { onFilterSelected(filter) }
+                label = itemLabel(item),
+                isSelected = isSelected,
+                onClick = { onItemSelected(item) }
             )
         }
     }
@@ -80,24 +77,5 @@ private fun FilterChipItem(
             style = FoodGoTheme.typography.bodyMedium,
             fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal
         )
-    }
-}
-
-@Composable
-@Preview
-private fun FilterChipItemPreview() {
-    FoodGoTheme {
-        FilterChipItem("Pizza", false) { }
-    }
-}
-
-@Composable
-@Preview
-private fun FilterChipRowPreview() {
-    FoodGoTheme {
-        FoodFilterRow(
-            selected = FoodFilter.ALL,
-            modifier = Modifier
-        ) { }
     }
 }
